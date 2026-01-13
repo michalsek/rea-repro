@@ -19,6 +19,7 @@ export default function App() {
       arr.push(Math.random());
 
       // using number[] directly causes the function to warn of TS error
+      // this happens also when the internal method is not using a generic type (just number[])
       return someInternalWorklet<number[]>(arr);
     });
 
